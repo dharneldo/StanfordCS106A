@@ -5,6 +5,7 @@
  * StoneMasonKarel is able to fix columns 4 space apart
  * StoneMasonKarel also has an ability to check last column
  * This solution is not very effective
+ * Adding a line
  */
 
 import stanford.karel.*;
@@ -34,11 +35,11 @@ public class StoneMasonKarel extends SuperKarel {
 		if (noBeepersPresent()) {
 			putBeeper();
 		}
-		while (frontIsClear()) {
+		while (beepersPresent() && frontIsClear()) {
+			move();
 			if (noBeepersPresent()) {
 			putBeeper();
 			}
-		move();
 		}
 	}
 	
